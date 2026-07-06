@@ -13,6 +13,10 @@ const getAccessToken = (req) => {
 };
 
 export const protect = async (req, res, next) => {
+  console.log("===== AUTH DEBUG =====");
+  console.log("Origin:", req.headers.origin);
+  console.log("Cookie Header:", req.headers.cookie);
+  console.log("Parsed Cookies:", req.cookies);
   const token = getAccessToken(req);
 
   if (!token) {

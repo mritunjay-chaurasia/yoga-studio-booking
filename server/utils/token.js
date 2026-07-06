@@ -65,7 +65,7 @@ const cookieOptions = (maxAge) => {
   return {
     httpOnly: true,
     secure: isProd,
-    sameSite: isProd ? 'strict' : 'lax',
+    sameSite: isProd ? 'none' : 'lax',
     path: '/',
     maxAge,
   };
